@@ -1,0 +1,70 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "safeworkflow"
+version = "1.0.0"
+description = "Prompt injection and supply-chain risk protection for agentic workflows"
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+requires-python = ">=3.10"
+authors = [
+    {name = "Mahesh Makwana", email = "mahesh.makwana787@gmail.com"}
+]
+keywords = ["prompt-injection", "security", "ai-safety", "agentic-workflows", "supply-chain", "llm-security"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Security",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+dependencies = [
+    "typer>=0.9.0",
+    "pydantic-settings>=2.0.0",
+    "pydantic>=2.0.0",
+    "rich>=13.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-cov>=4.0.0",
+    "ruff>=0.1.0",
+    "mypy>=1.0.0",
+    "build>=1.0.0",
+    "twine>=5.0.0",
+]
+
+[project.scripts]
+safeworkflow = "safeworkflow.cli:app"
+
+[project.urls]
+Homepage = "https://github.com/maheshmakvana/safeworkflow"
+Documentation = "https://github.com/maheshmakvana/safeworkflow#readme"
+Repository = "https://github.com/maheshmakvana/safeworkflow"
+Issues = "https://github.com/maheshmakwana/safeworkflow/issues"
+
+[tool.ruff]
+target-version = "py310"
+line-length = 88
+select = ["E", "F", "W", "I", "UP", "B", "C4", "SIM"]
+
+[tool.ruff.lint.isort]
+known-first-party = ["safeworkflow"]
+
+[tool.mypy]
+python_version = "3.10"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-v --cov=safeworkflow --cov-report=term-missing"
