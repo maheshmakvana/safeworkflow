@@ -1,3 +1,5 @@
+![safeworkflow Banner](assets/images/banner.svg)
+
 # SafeWorkflow
 
 **Prompt injection and supply-chain risk protection for agentic workflows**
