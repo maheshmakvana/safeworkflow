@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "safeworkflow"
-version = "1.0.0"
+version = "1.0.4"
 description = "Prompt injection and supply-chain risk protection for agentic workflows"
 readme = "README.md"
 license = "MIT"
