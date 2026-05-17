@@ -6,7 +6,7 @@ from .scanner import scan
 from .scorer import RiskLevel, Score
 from .types import ScanIssue, ScanResult
 
-__version__ = "1.0.0"
+__version__ = "1.0.7"
 __all__ = [
     "scan",
     "Score",

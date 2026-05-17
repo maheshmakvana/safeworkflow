@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "safeworkflow"
-version = "1.0.5"
+version = "1.0.7"
 description = "Prompt injection and supply-chain risk protection for agentic workflows"
 readme = "README.md"
 license = "MIT"
@@ -22,6 +22,7 @@ classifiers = [
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
     "Topic :: Security",
     "Topic :: Software Development :: Libraries :: Python Modules",
 ]
@@ -49,7 +50,7 @@ safeworkflow = "safeworkflow.cli:app"
 Homepage = "https://github.com/maheshmakvana/safeworkflow"
 Documentation = "https://github.com/maheshmakvana/safeworkflow#readme"
 Repository = "https://github.com/maheshmakvana/safeworkflow"
-Issues = "https://github.com/maheshmakwana/safeworkflow/issues"
+Issues = "https://github.com/maheshmakvana/safeworkflow/issues"
 
 [tool.ruff]
 target-version = "py310"
